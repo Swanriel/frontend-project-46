@@ -5,8 +5,8 @@ import json from './json.js'
 const formatters = {
   stylish,
   plain,
-  json
-};
+  json,
+}
 
 export default (formatName) => {
   const formatter = formatters[formatName]

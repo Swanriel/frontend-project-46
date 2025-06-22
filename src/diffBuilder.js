@@ -14,17 +14,17 @@ const buildDiff = (data1 = {}, data2 = {}) => {
     const value1 = safeData1[key]
     const value2 = safeData2[key]
     if (_.isPlainObject(value1) && _.isPlainObject(value2)) {
-      return { 
-        key, 
-        type: 'nested', 
-        children: buildDiff(value1, value2), 
+      return {
+        key,
+        type: 'nested',
+        children: buildDiff(value1, value2),
       }
     }
     if (!_.isEqual(value1, value2)) {
-      return { 
-        key, 
-        type: 'changed', 
-        oldValue: value1, 
+      return {
+        key,
+        type: 'changed',
+        oldValue: value1,
         newValue: value2,
       }
     }
