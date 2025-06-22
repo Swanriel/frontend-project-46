@@ -1,4 +1,3 @@
-import { readFileSync } from 'fs'
 import path from 'path'
 import genDiff from '../src/index.js'
 
