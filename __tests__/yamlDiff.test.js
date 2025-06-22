@@ -1,6 +1,6 @@
 import path from 'path'
 import { readFileSync } from 'fs'
-import genDiff from '../src/index.js'
+import genDiff from '@hexlet/code'
 
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename)
 
