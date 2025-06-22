@@ -17,7 +17,7 @@ const parseFile = (filepath) => {
         throw new Error(`Unsupported format: ${fileExtension}`)
     }
   }
-    catch (e) {
+  catch (e) {
     console.error(`Error parsing file ${filepath}:`, e.message)
     return {}
   }
