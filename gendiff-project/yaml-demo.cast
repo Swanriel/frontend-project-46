@@ -1,0 +1,7 @@
+{"version": 2, "width": 139, "height": 16, "timestamp": 1750555463, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
+[0.159313, "o", "\u001b[?2004h\u001b]0;olesia@DESKTOP-N8GS890: /mnt/c/frontend-project-46/gendiff-project\u0007\u001b[01;32molesia@DESKTOP-N8GS890\u001b[00m:\u001b[01;34m/mnt/c/frontend-project-46/gendiff-project\u001b[00m$ "]
+[2.062514, "o", "gendiff __fixtures__/file1.json __fixtures__/file2.json"]
+[3.480193, "o", "\r\n\u001b[?2004l\r"]
+[3.620457, "o", "{\r\n  - follow: false\r\n    host: hexlet.io\r\n  - proxy: 123.234.53.22\r\n  - timeout: 50\r\n  + timeout: 20\r\n  + verbose: true\r\n}\r\n"]
+[3.623539, "o", "\u001b[?2004h\u001b]0;olesia@DESKTOP-N8GS890: /mnt/c/frontend-project-46/gendiff-project\u0007\u001b[01;32molesia@DESKTOP-N8GS890\u001b[00m:\u001b[01;34m/mnt/c/frontend-project-46/gendiff-project\u001b[00m$ "]
+[6.571536, "o", "\u001b[?2004l\r\r\nexit\r\n"]
