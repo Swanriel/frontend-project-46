@@ -9,23 +9,19 @@ const formatValue = (value, depth) => {
   const indentSize = depth * 4
   const currentIndent = ' '.repeat(indentSize)
   const bracketIndent = ' '.repeat(indentSize - 4)
-
   const lines = Object.entries(value).map(
     ([key, val]) => `${currentIndent}${key}: ${formatValue(val, depth + 1)}`
   );
-
   return [
     '{',
     ...lines,
     `${bracketIndent}}`
   ].join('\n')
 };
-
 const formatStylish = (diff, depth = 1) => {
   const indentSize = depth * 4
   const indent = ' '.repeat(indentSize - 2)
   const bracketIndent = ' '.repeat(indentSize - 4)
-
   const lines = diff.flatMap((node) => {
     const { key, type } = node;
 
@@ -47,7 +43,6 @@ const formatStylish = (diff, depth = 1) => {
         throw new Error(`Unknown node type: ${type}`)
     }
   });
-
   return [
     '{',
     ...lines,

@@ -2,14 +2,12 @@ import { readFileSync } from 'fs'
 import path from 'path'
 import genDiff from '../src/index.js'
 
-const getFixturePath = (filename) => path.join(process.cwd(), '__fixtures__', filename)
-const readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8')
+const getFixturePath = filename => path.join(process.cwd(), '__fixtures__', filename)
 
 describe('Plain formatter', () => {
   test('should return correct plain output for nested structures', () => {
-    const file1 = getFixturePath('file1.json');
-    const file2 = getFixturePath('file2.json');
-    
+    const file1 = getFixturePath('file1.json')
+    const file2 = getFixturePath('file2.json')
     const expected = `
 Property 'common.follow' was added with value: false
 Property 'common.setting2' was removed
@@ -30,7 +28,6 @@ Property 'group3' was added with value: [complex value]
   test('should work with YAML files', () => {
     const file1 = getFixturePath('file1.yaml')
     const file2 = getFixturePath('file2.yaml')
-    
     const expected = `...`
     expect(genDiff(file1, file2, 'plain')).toEqual(expected)
   })

@@ -28,5 +28,4 @@ const buildPlainLines = (diff, path = '') => {
   return lines.join('\n')
 }
 
-export default (diff) => buildPlainLines(diff)
-
+export default diff => buildPlainLines(diff)

@@ -1,8 +1,8 @@
 import path from 'path'
 import { readFileSync } from 'fs'
-import genDiff from '@hexlet/code'
+import genDiff from '../src/index.js'
 
-const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename)
+const getFixturePath = filename => path.join(__dirname, '..', '__fixtures__', filename)
 
 test('flat YAML diff', () => {
   const file1 = getFixturePath('file1.yml')
